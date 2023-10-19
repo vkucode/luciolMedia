@@ -1,3 +1,9 @@
+body{
+    overflow-x: hidden;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
 .MainContainer{
     min-height: 100vh;
     position: relative;
@@ -249,13 +255,86 @@
 /* ---------------------------------------- */
 /* Fourth Section */
 .FourthSection{
-    height: fit-content;
+    height: 100vh;
     position: relative;
-    border: 1px solid gray;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
     color: #fff;
+}
+.FRTHTextContainer{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.FRTHTextContainer > h1{
+    font-family: 'CocoGoose';
+    text-shadow: 0px 0px 5px #fff;
+}
+.FRTHNumbers{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.FRTHNumbers > div{
+    margin: 10px 30px;
+}
+.FRTHNumbers > div > span{
+    font-weight: 800;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 80px;
+    text-shadow: 0px 0px 5px #fff;
+}
+.FRTHNumbers > div > h4{
+    font-family: 'CocoGooseLight';
+    text-shadow: 0px 0px 5px #fff;
+}
+.FRTHTextContainer > p{
+    width: 80%;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: 'CocoGooseLight';
+    text-shadow: 0px 0px 5px #fff;
+}
+.FRTHTextContainer > p > span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.FRTHimgContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    height: 100%;
+    width: 50%;
+}
+.FRTHimgContainer > img{
+    position: relative;
+    top: 0;
+    z-index: 1;
+    width: 200%;
+}
+
+/* ---------------------------------------- */
+/*Fiveth Section*/
+.FivethSection{
+height: 100vh;
+position: relative;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+text-transform: uppercase;
+color: #fff;
 }

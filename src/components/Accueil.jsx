@@ -11,6 +11,7 @@ import speakersImg from '../assets/img/Icon_HautParleur.png'
 import dimensionImg from '../assets/img/Icon_3ecrans.png'
 import frstimgCamionTHRDSection from '../assets/img/LUCIOLE MEDIA IMAGE CAMION.png'
 import scndimgCamionTHRDSection from '../assets/img/LUCIOLE MEDIA CAMION 2.png'
+import imgcamionBack from '../assets/img/Camion_3.png'
 
 const Accueil = () => {
   return (
@@ -19,7 +20,7 @@ const Accueil = () => {
     <div className={`${classes.MainContainer} container-fluid`}>
       <div className={`container`}>
         <div className='row'>
-          <div className={`${classes.IntroSection} col-12`}>
+          <section className={`${classes.IntroSection} col-12`}>
               <div className={`${classes.camionSection}`}>
                 <img src={backgroundCamion} alt="" className={`${classes.backgroundCamion}`}/>
                 <div className={`${classes.camionText}`}>
@@ -34,8 +35,8 @@ const Accueil = () => {
                     luciole media, specialiste en solutions d'affichages difitales et dynamiques, propose les meilleurs services pour vos operations street marketing
                   </p>
               </div>  
-          </div>
-          <div className={`${classes.SecondSection} col-12`}>
+          </section>
+          <section className={`${classes.SecondSection} col-12`}>
             <div>
               <div className={`${classes.proprietiesElements}`}>
                 <div className={`${classes.frstCharacter}`}>
@@ -66,8 +67,8 @@ const Accueil = () => {
               <img src={camionTopCamera} alt="" className={`${classes.SCNDcamionTop}`} /> 
                
             </div>
-          </div>
-          <div className={`${classes.ThirdSetion} col-12`}>
+          </section>
+          <section className={`${classes.ThirdSetion} col-12`}>
             <div>
               <h1>pourquoi&nbsp;nous&nbsp;choisir?</h1>
             </div>
@@ -83,10 +84,35 @@ const Accueil = () => {
                 <p>choisissez les itineraires strategiques pour atteindre votre public cible exactement la ou ils se trouvent.</p>
               </div>
             </div>
-          </div>
-          <div className={`${classes.FourthSection} col-12`}>
+          </section>
+          <section className={`${classes.FourthSection} col-12`}>
+            <div className={`${classes.FRTHTextContainer}`} >
+              <h1>un&nbsp;impact&nbsp;memorable</h1>
+              <div className={`${classes.FRTHNumbers}`}>
+                <div>
+                  <span>59%</span>
+                  <h4>taux de <br />memorisation</h4>
+                </div>
+                <div>
+                <span>75%</span>
+                  <h4>taux <br /> d'attention</h4>
+                </div>
+              </div>
+              <p>avec <span>20m<sup>2</sup> d'affichage digital dynamique et un systeme audio stereo performant. marques les espirits avec une publicite innovante et moderne</span></p>
+            </div>
+            <div className={`${classes.FRTHimgContainer}`}>
+              <img src={imgcamionBack} alt="" />
+            </div>
+            
+          </section>
+          <section className={`${classes.FivethSection} col-12`}>
+            <div>
 
-          </div>
+            </div>
+            <div>
+              
+            </div>
+          </section>
         </div>
       </div>
     </div>

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "CocoGoose";
+    src: url(../fonts/Cocogoose\ Pro-trial.ttf);
+}
+@font-face {
+    font-family: "CocoGooseItalic";
+    src: url(../fonts/Cocogoose\ Pro\ Italic-trial.ttf)
+}
+@font-face {
+    font-family: "CocoGooseLight";
+    src: url(../fonts/Cocogoose\ Pro\ Light-trial.ttf)
+}
+@font-face {
+    font-family: "CocoGooseItalicLight";
+    src: url(../fonts/Cocogoose\ Pro\ Light\ Italic-trial.ttf)
+}

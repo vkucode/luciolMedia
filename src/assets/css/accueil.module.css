@@ -1,0 +1,261 @@
+.MainContainer{
+    min-height: 100vh;
+    position: relative;
+    background: #000;
+}
+/*FIRST INTRO SECTION*/
+.IntroSection{
+    height: fit-content;
+}
+.camionSection{
+    position: relative;
+    height: 80vh;
+}
+.backgroundCamion{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+.camionText{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    top: 8%;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.camionText > h1{
+    margin-top: 5%;
+    letter-spacing: 5px;
+    text-align: left;
+    margin-left: 8%;
+    font-family: 'CocoGoose';
+    text-shadow: 0px 0px 15px #fff;
+    font-size: 150px;
+    line-height: 0.5;
+}
+.camionText > p{
+    text-align: right;
+    margin-right: 5%;
+    letter-spacing: 5px;
+    font-family: 'CocoGooseLight';
+    text-shadow: 0px 0px 5px #fff;
+    font-size: 70px
+}
+.camionImg{
+    position: absolute;
+    top: 10%;
+    z-index: 3;
+    width: 100%;
+}
+.IntroText{
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.IntroText >h2{
+    font-size: 40px;
+    font-family: 'CocoGoose';
+    text-shadow: 0px 0px 5px #fff;
+}
+.IntroText >p{
+    width: 70%;
+    letter-spacing: 2px;
+    font-family: 'CocoGooseLight';
+    text-align: center;
+}
+/* END FIRST INTRO SECTION*/
+
+/* SECOND SECTION */
+.SecondSection{
+    height: fit-content;
+    position: relative;
+}
+.SCNDcamionTop{
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+}
+.proprietiesElements{
+    height: 100vh;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+}
+/* ---------------------------------------- */
+.frstCharacter {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+.frstCharacter > h1{
+    text-align: right;
+    font-weight: 800;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0px 0px 5px #fff;
+}
+.frstCharacter > h1 > span{
+    font-weight: 400;
+    font-family: 'CocoGoose';
+    text-shadow: 0px 0px 5px #fff;
+}
+.frstCharacter > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+.frstCharacter > div > hr {
+    width: 150px;
+    margin-right: 20px;
+    position: relative;
+    height: 2px;
+    border: none;
+    opacity: 1;
+    background-color: #fff;
+}
+.frstCharacter > div >p{
+    text-align: right;
+    font-family: 'CocoGooseLight';
+    text-shadow: 0px 0px 5px #fff;
+}
+/* ---------------------------------------- */
+.scndCharacter{
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+.scndCharacter > img{
+    margin: 10px;
+    width: 60px;
+}
+.scndCharacter > div > h2{
+    font-family: 'CocoGoose';
+    text-shadow: 0px 0px 5px #fff;
+}
+.scndCharacter > hr{
+    width: 80px;
+    margin-left: 20px;
+    position: relative;
+    height: 2px;
+    border: none;
+    opacity: 1;
+    background-color: #fff;
+}
+/* ---------------------------------------- */
+.thrdCharacter{
+    position: absolute;
+    left: 15%;
+    bottom: 30%;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+.thrdCharacter > img {
+    margin: 10px;
+    width: 90px;
+}
+.thrdCharacter > div > h2 {
+    font-weight: 800;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0px 0px 5px #fff;
+}
+.thrdCharacter > div > h2 > span{
+    font-weight: 400;
+    font-family: 'CocoGoose';
+    text-shadow: 0px 0px 5px #fff;
+}
+.thrdCharacter > hr{
+    width: 200px;
+    margin-left: 20px;
+    position: relative;
+    height: 2px;
+    border: none;
+    opacity: 1;
+    background-color: #fff;
+}
+/* ---------------------------------------- */
+/* Third Section */
+.ThirdSetion{
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+.ThirdSetion > div > h1{
+    font-size: 50px;
+    font-family: 'CocoGoose';
+    text-shadow: 0px 0px 5px #fff;
+}
+.THRDimgContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.THRDimgContainer > img{
+    width: 450px;
+    margin: 30px 0px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 1px #fff;
+}
+.THRDtextContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.THRDtextContainer > h1,h3{
+    font-family: 'CocoGoose';
+    text-shadow: 0px 0px 5px #fff;
+}
+.THRDtextContainer > span{
+    font-size: 100px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0px 0px 5px #fff;
+}
+.THRDtextContainer > p{
+    letter-spacing: 3px;
+    font-family: 'CocoGooseLight';
+}
+/* ---------------------------------------- */
+/* Fourth Section */
+.FourthSection{
+    height: fit-content;
+    position: relative;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+}

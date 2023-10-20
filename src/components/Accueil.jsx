@@ -89,7 +89,7 @@ const Accueil = () => {
                
             </div>
           </section>
-          <section className={`${classes.ThirdSetion} col-12`}>
+          <section className={`${classes.ThirdSetion} col-12`} id='details'>
             <div>
               <h1>pourquoi&nbsp;nous&nbsp;choisir?</h1>
             </div>
@@ -137,7 +137,7 @@ const Accueil = () => {
               <p>les videos et les animations dynamiques sur nos camions led restent graves dans l'espirit des spectateurs. Generant un imapact durable.</p>
             </div>
           </section>
-          <section className={`${classes.ContactSection} col-12`}>
+          <section className={`${classes.ContactSection} col-12`} id='contact'>
             <div>
               <h1>Nous Contacter</h1>
               <p>Collaborons et transformons vos idées en réalité.</p>

@@ -1,4 +1,5 @@
 body{
+    background: #000;
     overflow-x: hidden;
     width: 100vw;
     margin: 0;
@@ -107,7 +108,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
 }
 .frstCharacter > h1{
     text-align: right;
@@ -307,7 +308,6 @@ body{
 }
 .FRTHTextContainer > p > span{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 .FRTHimgContainer{
@@ -329,7 +329,7 @@ body{
 /* ---------------------------------------- */
 /*Fiveth Section*/
 .FivethSection{
-height: 100vh;
+height: 80vh;
 position: relative;
 display: flex;
 flex-direction: row;
@@ -337,4 +337,34 @@ justify-content: center;
 align-items: center;
 text-transform: uppercase;
 color: #fff;
+}
+.FVTHimgContainer{
+    width: 100%;
+}
+.FVTHimgContainer > img{
+    margin-left: -15%;
+    width: 200%;
+}
+.FVTHtextContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.FVTHtextContainer > h1,h5{
+    font-family: 'CocoGoose';
+    text-shadow: 0px 0px 5px #fff;
+}
+.FVTHtextContainer > span{
+    margin-top: -20px;
+    font-size: 80px;
+    font-weight: 800;
+    text-shadow: 0px 0px 5px #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.FVTHtextContainer > p{
+    font-family: 'CocoGooseLight';
+    letter-spacing: 3px;
+    width: 80%;
 }

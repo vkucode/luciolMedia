@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useState} from 'react'
+import axios from 'axios'
 import Navbar from './elements/Navbar'
 import Footer from './elements/Footer'
 import classes from '../assets/css/accueil.module.css'
@@ -12,8 +13,30 @@ import dimensionImg from '../assets/img/Icon_3ecrans.png'
 import frstimgCamionTHRDSection from '../assets/img/LUCIOLE MEDIA IMAGE CAMION.png'
 import scndimgCamionTHRDSection from '../assets/img/LUCIOLE MEDIA CAMION 2.png'
 import imgcamionBack from '../assets/img/Camion_3.png'
+import FVTHimgCamion from '../assets/img/Camion_4.png'
 
 const Accueil = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post('/send.php', formData)
+      .then(response => {
+        if (response.data.sent) {
+          alert('Mesajul a fost trimis cu succes!');
+        } else {
+          alert('Eroare la trimiterea mesajului.');
+        }
+      })
+      .catch(error => {
+        console.error('There was an error sending the message!', error);
+      });
+  };
   return (
     <>
     <Navbar />
@@ -36,7 +59,7 @@ const Accueil = () => {
                   </p>
               </div>  
           </section>
-          <section className={`${classes.SecondSection} col-12`}>
+          <section className={`${classes.SecondSection} col-12`} id='informations'>
             <div>
               <div className={`${classes.proprietiesElements}`}>
                 <div className={`${classes.frstCharacter}`}>
@@ -106,12 +129,51 @@ const Accueil = () => {
             
           </section>
           <section className={`${classes.FivethSection} col-12`}>
-            <div>
-
+            <div className={`${classes.FVTHimgContainer}`}>
+              <img src={FVTHimgCamion} alt="" />
             </div>
-            <div>
-              
+            <div className={`${classes.FVTHtextContainer}`}>
+              <h1>statique&nbsp;ou&nbsp;mobile</h1>
+              <span>-29%</span>
+              <h5>cout contact versus affichage statique</h5>
+              <p>les videos et les animations dynamiques sur nos camions led restent graves dans l'espirit des spectateurs. Generant un imapact durable.</p>
             </div>
+          </section>
+          <section className={`${classes.ContactSection} col-12`}>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              required
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone"
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              required
+            ></textarea>
+            <button type="submit">Trimite</button>
+          </form>
           </section>
         </div>
       </div>

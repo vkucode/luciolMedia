@@ -1,0 +1,74 @@
+footer{
+    position: relative;
+    background: #000;
+    border: 2px solid #fff;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 0px 10px 1px #fff;
+    padding: 45px 20px 10px 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.SuivezNous{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.SuivezNous > h3{
+    font-family: 'CocoGoose';
+    text-shadow: 0px 0px 5px #fff;
+}
+.SuivezNous > div{
+    display: flex;
+    margin-top: -15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start
+}
+.SuivezNous > div > a{
+    color: #fff;
+    font-size: x-large;
+    margin: 5px;
+    text-shadow: 0px 0px 5px #fff;
+}
+.linksFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-shadow: 0px 0px 5px #fff;
+}
+.linksFooter > h2 {
+    margin: 5px;
+    font-family: 'CocoGoose';
+}
+.linksFooter > a {
+    color: #fff;
+    margin: 5px;
+    text-decoration: none;
+    font-family: 'CocoGooseLight';
+}
+.linksFooter > a > span {
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.copyrightSection{
+    text-transform: none;
+    padding: 80px 10px 0px 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.copyrightSection > p > a > img{
+    width: 30px;
+}
+.logoNavbar{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

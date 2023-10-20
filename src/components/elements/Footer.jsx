@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={`${classes.copyrightSection} row`}>
-          <p><FaRegCopyright />LucioleMedia Tous droits réservés | Designed by <a href="https://www.persoconcept.fr/"><img src={persoconceptLogo} alt="" /></a><br />Powered by <a href="https://vkucode.com/"><img src={vkucodeLogo} alt="" /></a></p>
+          <p><FaRegCopyright />LucioleMedia. Tous droits réservés | Designed by <a href="https://www.persoconcept.fr/"><img src={persoconceptLogo} alt="" /></a><br />Powered by <a href="https://vkucode.com/"><img src={vkucodeLogo} alt="" /></a></p>
         </div>
       </div>
     </footer>

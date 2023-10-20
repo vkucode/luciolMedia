@@ -25,12 +25,12 @@ const Accueil = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('/send.php', formData)
+    axios.post('https://luciolemedia.fr/send.php', formData)
       .then(response => {
         if (response.data.sent) {
-          alert('Mesajul a fost trimis cu succes!');
+          alert('Le message a été envoyé avec succès ! Merci.');
         } else {
-          alert('Eroare la trimiterea mesajului.');
+          alert("Erreur lors de l'envoi du message.");
         }
       })
       .catch(error => {
@@ -140,40 +140,52 @@ const Accueil = () => {
             </div>
           </section>
           <section className={`${classes.ContactSection} col-12`}>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              required
-            />
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              required
-            ></textarea>
-            <button type="submit">Trimite</button>
-          </form>
+            <div>
+              <h1>Nous Contacter</h1>
+              <p>Collaborons et transformons vos idées en réalité.</p>
+              <hr />
+              </div>
+            <div>
+              <form onSubmit={handleSubmit}>
+                <div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Votre nom"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
+                />
+                </div>
+                <div>
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Telephone"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  required
+                />
+                <input
+                  type="text"
+                  name="message"
+                  placeholder="Message (optional)"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                ></input>
+                </div>
+                <button className={`${classes.SendButton}`} type="submit">Envoyer</button>
+              </form>
+            </div>
+          
           </section>
         </div>
       </div>

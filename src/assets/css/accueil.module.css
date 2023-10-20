@@ -368,3 +368,69 @@ color: #fff;
     letter-spacing: 3px;
     width: 80%;
 }
+/*Contact Section*/
+.ContactSection{
+    margin-top: -10%;
+    margin-bottom: 10%;
+    box-shadow: 0px 0px 10px 5px gray;
+    border: 2px solid gray;
+    border-radius: 20px; 
+    padding: 50px 0px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.ContactSection > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ContactSection > div > h1{
+    font-family: 'CocoGoose';
+    text-shadow: 0px 0px 5px #fff;
+}
+.ContactSection > div > p{
+    width: 80%;
+    text-align: center;
+    font-family: 'CocoGooseLight';
+    text-shadow: 0px 0px 5px #fff;
+}
+.ContactSection > div > hr{
+    margin-top: 3px;
+    border: none;
+    opacity: 1;
+    width: 200px;
+    height: 3px;
+    background-color: #fff;
+}
+.ContactSection > div > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ContactSection > div > form > div > input{
+    background: transparent;
+    font-family: 'CocoGoose';
+    margin: 2.5%;
+    border: none;
+    outline: none;
+    width: 45%;
+    border-bottom: 2px solid white;
+}
+.SendButton{
+    text-transform: uppercase;
+    font-family: 'CocoGoose';
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    background-color: #000;
+    border: 2px solid white;
+    color: #fff;
+    transition: 0.3s all ease-in-out;
+}
+.SendButton:hover{
+    box-shadow: 0px 0px 10px 2px #fff;
+    background-color: #fff;
+    color: #000;
+}

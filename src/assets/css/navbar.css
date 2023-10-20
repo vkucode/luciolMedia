@@ -1,8 +1,10 @@
+
 .navbar{
     position: fixed!important;
-    z-index: 99;
+    z-index: 999;
+    top: 0;
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: center;
     align-items: center;
     border-radius: 0px 0px 20px 20px;
@@ -52,4 +54,21 @@
     text-transform: uppercase;
     font-family: 'CocoGooseLight';
     font-size: 10px;
+}
+@media (max-width: 564px) {
+    .logoNavbar{
+        padding: 5px 10px;
+    }
+    .brandMainTitle{
+        top: 15px;
+        font-size: 28px;
+    }
+    .brandSubText{
+        top: 15px;
+        font-size: 8px;
+    }
+    .nav-link{
+        margin-left: 10px;
+        font-size: 20px!important;
+    }
 }

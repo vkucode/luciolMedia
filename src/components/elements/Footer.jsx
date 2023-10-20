@@ -40,11 +40,11 @@ const Footer = () => {
               nous-contacter
             </h2>
             <a href="mailto: contact@luciolemedia.fr"><MdEmail/>&nbsp;contact<SiMaildotru/>luciolemedia.fr</a>
-            <a href="tel: 01 23 45 67 89"><FaPhoneAlt/>&nbsp;<span>01 23 45 67 89</span></a>
+            <a href="tel: +33161308603"><FaPhoneAlt/>&nbsp;<span>01 61 30 86 03</span></a>
           </div>
         </div>
         <div className={`${classes.copyrightSection} row`}>
-          <p><FaRegCopyright />LucioleMedia. Tous droits réservés | Designed by <a href="https://www.persoconcept.fr/"><img src={persoconceptLogo} alt="" /></a><br />Powered by <a href="https://vkucode.com/"><img src={vkucodeLogo} alt="" /></a></p>
+          <p><FaRegCopyright />LucioleMedia. Tous droits réservés | Designed by <a href="https://www.persoconcept.fr/"><img src={persoconceptLogo} alt="" /></a>&nbsp;Powered by <a href="https://vkucode.com/"><img src={vkucodeLogo} alt="" /></a></p>
         </div>
       </div>
     </footer>

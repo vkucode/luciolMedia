@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import axios from 'axios'
-import Navbar from './elements/Navbar'
 import Footer from './elements/Footer'
 import classes from '../assets/css/accueil.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -39,7 +38,6 @@ const Accueil = () => {
   };
   return (
     <>
-    <Navbar />
     <div className={`${classes.MainContainer} container-fluid`}>
       <div className={`container`}>
         <div className='row'>

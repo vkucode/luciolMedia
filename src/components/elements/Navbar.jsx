@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className={`${addAnimationNav} animate__fadeInDown navbar navbar-expand-lg navbar-light bg-black`}>
+    <nav className={`${addAnimationNav} animate__fadeInDown navbar navbar-expand-lg navbar-light bg-dark`}>
         <div className="container">
           <div className='logoNavbar d-flex flex-column justify-content-center align-items-center'>
             <h3 className='brandMainTitle'>luciole<span>Media</span></h3>

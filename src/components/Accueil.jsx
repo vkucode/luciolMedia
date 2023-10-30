@@ -1,5 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollSmoother } from 'gsap/ScrollSmoother'
 import Footer from './elements/Footer'
 import classes from '../assets/css/accueil.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -14,6 +17,7 @@ import scndimgCamionTHRDSection from '../assets/img/LUCIOLE MEDIA CAMION 2.png'
 import imgcamionBack from '../assets/img/Camion_3.png'
 import FVTHimgCamion from '../assets/img/Camion_4.png'
 
+
 const Accueil = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -22,6 +26,16 @@ const Accueil = () => {
     message: '',
   });
 
+  const [addAnimation, setAddAnimation] = useState('');
+
+  useEffect(() => {
+    const animationTimer = setTimeout(() => {
+      setAddAnimation('animate__animated');
+    }, 3200);
+    return () => {
+      clearTimeout(animationTimer); // curăță timerul când componenta este demontată
+    };
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('https://luciolemedia.fr/send.php', formData)
@@ -36,38 +50,151 @@ const Accueil = () => {
         console.error('There was an error sending the message!', error);
       });
   };
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollTrigger.normalizeScroll(true)
+
+// create the smooth scroller FIRST!
+ScrollSmoother.create({
+  smooth: 2,
+  effects: true,
+});
+
+/*GSAP ANIMATIONS*/
+  gsap.to("#informations", {
+    scrollTrigger: {
+      trigger: "#informations",
+      start: "top center",
+      end: "bottom center",
+      // markers: true,
+      scrub: 2,
+    },
+    y: 200,
+    opacity: 1,
+  });
+
+  gsap.to("#frstCharacter", {
+    scrollTrigger: {
+      trigger: "#informations",
+      start: "top center",
+      end: "bottom center",
+      // markers: true,
+      scrub: 2,
+    },
+    x: -100,
+    display: "flex",
+    opacity: 1,
+  });
+  gsap.to("#scndCharacter", {
+    scrollTrigger: {
+      trigger: "#informations",
+      start: "top center",
+      end: "bottom center",
+      // markers: true,
+      scrub: 2,
+    },
+    x: 100,
+    display: "flex",
+    opacity: 1,
+  });
+  gsap.to("#thrdCharacter", {
+    scrollTrigger: {
+      trigger: "#informations",
+      start: "top center",
+      end: "bottom center",
+      // markers: true,
+      scrub: 2,
+    },
+    x: 150,
+    display: "flex",
+    opacity: 1,
+  });
+
+  gsap.to("#details", {
+    scrollTrigger: {
+      trigger: "#details",
+      start: "top center",
+      end: "bottom center",
+      // markers: true,
+      scrub: 2,
+    },
+    y: 120,
+    opacity: 1,
+  });
+  gsap.to("#fourthSection", {
+    scrollTrigger: {
+      trigger: "#fourthSection",
+      start: "top center",
+      end: "bottom center",
+      // markers: true,
+      scrub: 2,
+    },
+    y: 120,
+    opacity: 1,
+  });
+
+  gsap.to("#fivethSection", {
+    scrollTrigger: {
+      trigger: "#fivethSection",
+      start: "top center",
+      end: "bottom center",
+      // markers: true,
+      scrub: 2,
+    },
+    y: 50,
+    opacity: 1,
+  });
+
+  gsap.to("#contact", {
+    scrollTrigger: {
+      trigger: "#contact",
+      start: "top center",
+      end: "bottom center",
+      // markers: true,
+      scrub: 2,
+    },
+    y: 50,
+    opacity: 1,
+  });
+
+/*GSAP ANIMATIONS*/
+
   return (
     <>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+
     <div className={`${classes.MainContainer} container-fluid`}>
       <div className={`container`}>
         <div className='row'>
           <section className={`${classes.IntroSection} col-12`}>
               <div className={`${classes.camionSection}`}>
-                <img src={backgroundCamion} alt="" className={`${classes.backgroundCamion}`}/>
+                <img src={backgroundCamion} alt="" className={`${classes.backgroundCamion} ${addAnimation} animate__fadeIn`}/>
                 <div className={`${classes.camionText}`}>
-                  <h1>illuminez</h1>
-                  <p>votre&nbsp;marque</p>
+                  <h1 className={`${addAnimation} animate__fadeInLeft`}>illuminez</h1>
+                  <p className={`${addAnimation} animate__fadeInRight`}>votre&nbsp;marque</p>
                 </div>
-                <img src={camionImg} alt="" className={`${classes.camionImg}`} />
+                <img src={camionImg} alt="" className={`${classes.camionImg} ${addAnimation} animate__fadeInRight`} />
               </div>
-              <div className={`${classes.IntroText}`}>
-                  <h2>vivez une experience phygitale unique</h2>
+              <div className={`${classes.IntroText} ${addAnimation} animate__fadeInUp`} id='informationsLink'>
+                  <h2>vivez une experience digitale unique</h2>
                   <p>
-                    luciole media, specialiste en solutions d'affichages difitales et dynamiques, propose les meilleurs services pour vos operations street marketing
+                    luciole media, specialiste en solutions d'affichages digitales et dynamiques, propose les meilleurs services pour vos operations street marketing
                   </p>
               </div>  
           </section>
           <section className={`${classes.SecondSection} col-12`} id='informations'>
             <div>
               <div className={`${classes.proprietiesElements}`}>
-                <div className={`${classes.frstCharacter}`}>
+                <div className={`${classes.frstCharacter}`} id='frstCharacter'>
                   <h1>1&nbsp;<span>million&nbsp;de&nbsp;led</span></h1>
                   <div>
                     <hr />
                     <p>aux couleurs vives et une luminosite exceptionelle</p>
                   </div>
                 </div>
-                <div className={`${classes.scndCharacter}`}>
+                <div className={`${classes.scndCharacter}`} id='scndCharacter'>
                   <img src={speakersImg} alt="" />
                     <div>
                       <h2>hauts&nbsp;parleurs</h2>
@@ -75,7 +202,7 @@ const Accueil = () => {
                     </div>
                   <hr />
                 </div>
-                <div className={`${classes.thrdCharacter}`}>
+                <div className={`${classes.thrdCharacter}`} id='thrdCharacter'>
                 <img src={dimensionImg} alt="" />
                     <div>
                       <h2><span>diffusion&nbsp;sur</span></h2>
@@ -106,7 +233,7 @@ const Accueil = () => {
               </div>
             </div>
           </section>
-          <section className={`${classes.FourthSection} col-12`}>
+          <section className={`${classes.FourthSection} col-12`} id='fourthSection'>
             <div className={`${classes.FRTHTextContainer}`} >
               <h1>un&nbsp;impact&nbsp;memorable</h1>
               <div className={`${classes.FRTHNumbers}`}>
@@ -126,7 +253,7 @@ const Accueil = () => {
             </div>
             
           </section>
-          <section className={`${classes.FivethSection} col-12`}>
+          <section className={`${classes.FivethSection} col-12`} id='fivethSection'>
             <div className={`${classes.FVTHimgContainer}`}>
               <img src={FVTHimgCamion} alt="" />
             </div>
@@ -188,7 +315,10 @@ const Accueil = () => {
         </div>
       </div>
     </div>
-    <Footer />
+
+          <Footer />
+        </div>
+    </div>
     </>
   )
 }

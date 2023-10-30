@@ -1,13 +1,32 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import gsap from 'gsap'
+import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import '../../assets/css/navbar.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.js'
 import 'animate.css'
 
+
 const Navbar = () => {
+  const [addAnimationNav, setAddAnimation] = useState('');
+
+  gsap.registerPlugin(ScrollToPlugin)
+  function scrollToLink(idSection){
+    gsap.to(window, { duration: 1, scrollTo: idSection });
+  }
+
+  useEffect(() => {
+    const animationNavTimer = setTimeout(() => {
+      setAddAnimation('animate__animated');
+    }, 3000);
+    return () => {
+      clearTimeout(animationNavTimer); // curăță timerul când componenta este demontată
+    };
+  }, []);
+
   return (
     <>
-    <nav className="navbar navbar-expand-lg navbar-light bg-black">
+    <nav className={`${addAnimationNav} animate__fadeInDown navbar navbar-expand-lg navbar-light bg-black`}>
         <div className="container">
           <div className='logoNavbar d-flex flex-column justify-content-center align-items-center'>
             <h3 className='brandMainTitle'>luciole<span>Media</span></h3>
@@ -20,13 +39,13 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="collapsibleNavId">
           <ul className="navbar-nav me-auto mt-2 mt-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="#informations">Le camion</a>
+              <button className="nav-link" onClick={() => scrollToLink("#informationsLink")}>Le camion</button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#details">Information</a>
+            <button className="nav-link" onClick={() => scrollToLink("#details")}>Informations</button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contact">Contact</a>
+            <button className="nav-link" onClick={() =>scrollToLink("#contact")}>Contact</button>
             </li>
           </ul>
         </div>

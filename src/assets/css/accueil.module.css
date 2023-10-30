@@ -71,6 +71,7 @@ body{
     align-items: center;
 }
 .IntroText >h2{
+    padding-top: 150px;
     font-size: 40px;
     font-family: 'CocoGoose';
     text-shadow: 0px 0px 5px #fff;
@@ -114,10 +115,11 @@ body{
         z-index: 3;
         width: 100%;
     }
-    .IntroText >h2{
+    .IntroText > h2{
+        padding-top: 100px;
         font-size: 25px;
     }
-    .IntroText >p{
+    .IntroText > p{
         width: 100%;
         font-size: small;
     }
@@ -145,7 +147,7 @@ body{
 /* ---------------------------------------- */
 .frstCharacter {
     position: absolute;
-    right: 0;
+    right: -100px;
     top: 100px;
     z-index: 2;
     display: flex;
@@ -187,7 +189,7 @@ body{
 /* ---------------------------------------- */
 .scndCharacter{
     position: absolute;
-    left: 0;
+    left: -150px;
     bottom: 40%;
     z-index: 2;
     display: flex;
@@ -215,7 +217,7 @@ body{
 /* ---------------------------------------- */
 .thrdCharacter{
     position: absolute;
-    left: 15%;
+    left: 0%;
     bottom: 30%;
     z-index: 2;
     display: flex;
@@ -340,6 +342,7 @@ body{
 .ThirdSetion{
     height: fit-content;
     position: relative;
+    padding-top: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -387,6 +390,7 @@ body{
 }
 @media (max-width: 564px) {
     .ThirdSetion{
+        padding-top: 100px;
         margin-top: 5vh;
         height: fit-content;
         color: #fff;
